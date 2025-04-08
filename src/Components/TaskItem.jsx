@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const TaskItem = ({ task, toggleTask, startEditing, editingTask, setEditingTask, saveEdit }) => {
+export const TaskItem = ({ task, toggleTask, startEditing, editingTask, setEditingTask, saveEdit, deleteTask }) => {
   return (
     <div className={`task-item ${task.completed ? 'completed' : ''}`}>
       {editingTask && editingTask.id === task.id ? (
@@ -29,7 +29,10 @@ export const TaskItem = ({ task, toggleTask, startEditing, editingTask, setEditi
               className="task-checkbox"
             />
             <h3>{task.title}</h3>
-            <button onClick={() => startEditing(task)} className="edit-button">Edit</button>
+            <div className="task-actions">
+              <button onClick={() => startEditing(task)} className="edit-button">Edit</button>
+              <button onClick={() => deleteTask(task.id)} className="delete-button">Delete</button>
+            </div>
           </div>
           <p className="task-description">{task.description}</p>
         </>

@@ -139,6 +139,12 @@
     margin-bottom: 0.5rem;
   }
 
+  .task-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+  }
+
   .task-checkbox {
     width: 20px;
     height: 20px;
@@ -151,7 +157,7 @@
     line-height: 1.5;
   }
 
-  .edit-button, .save-button, .cancel-button {
+  .edit-button, .save-button, .cancel-button, .delete-button {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 6px;
@@ -163,6 +169,15 @@
   .edit-button {
     background: #f8f9fa;
     color: #2c3e50;
+  }
+
+  .delete-button {
+    background: #e74c3c;
+    color: white;
+  }
+
+  .delete-button:hover {
+    background: #c0392b;
   }
 
   .save-button {

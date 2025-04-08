@@ -1,7 +1,7 @@
 import React from 'react';
 import { TaskItem } from './TaskItem';
 
-export const TaskList = ({ filteredTasks, toggleTask, startEditing, editingTask, setEditingTask, saveEdit }) => {
+export const TaskList = ({ filteredTasks, toggleTask, startEditing, editingTask, setEditingTask, saveEdit, deleteTask }) => {
   return (
     <div className="tasks-list">
       {filteredTasks.map(task => (
@@ -13,6 +13,7 @@ export const TaskList = ({ filteredTasks, toggleTask, startEditing, editingTask,
           editingTask={editingTask}
           setEditingTask={setEditingTask}
           saveEdit={saveEdit}
+          deleteTask={deleteTask}
         />
       ))}
     </div>
